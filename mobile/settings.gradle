@@ -1,0 +1,6 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories { google(); mavenCentral() } }
+rootProject.name = "NativeSSOMobile"
+include(":super-app", ":child-app")
+project(":super-app").projectDir = file("super-app/app")
+project(":child-app").projectDir = file("child-app/app")
